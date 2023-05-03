@@ -5,7 +5,7 @@ const eName = document.getElementById("lastName");
 
 //=========== UNDER ===========//
 
-// fName under 2 => error (red)
+// fName under 2 => error (red) => assets/css/form.css => linje 62
 fName.addEventListener("input", () => {
   if (fName.value.length < 2) {
     fName.classList.add("error");
@@ -14,7 +14,7 @@ fName.addEventListener("input", () => {
   }
 });
 
-// eName under 3 => error (red)
+// eName under 3 => error (red) => assets/css/form.css => linje 62
 eName.addEventListener("input", () => {
   if (eName.value.length < 3) {
     eName.classList.add("error");
@@ -25,7 +25,7 @@ eName.addEventListener("input", () => {
 
 //=========== OVER ===========//
 
-// fName over 2 => (green)
+// fName over 2 => (green) => assets/css/form.css => linje 66
 fName.addEventListener("input", () => {
   if (fName.value.length > 2) {
     fName.classList.add("over");
@@ -34,7 +34,7 @@ fName.addEventListener("input", () => {
   }
 });
 
-// eName over 3 => (green)
+// eName over 3 => (green) => assets/css/form.css => linje 66
 eName.addEventListener("input", () => {
   if (eName.value.length > 3) {
     eName.classList.add("over");
