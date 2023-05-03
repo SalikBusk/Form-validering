@@ -1,6 +1,10 @@
 const fName = document.getElementById("firstName");
 const eName = document.getElementById("lastName");
 
+const submitButton = document.getElementById("submitButton");
+
+const message = document.getElementById("message");
+
 
 
 //=========== UNDER ===========//
@@ -42,3 +46,42 @@ eName.addEventListener("input", () => {
     eName.classList.remove("over")
   }
 });
+
+
+//=========== submitButton ===========//
+submitButton.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const fname = document.getElementById("firstName").value;
+  const ename = document.getElementById("lastName").value;
+  const message = document.getElementById("message");
+
+  if (fname === "" || ename === "") {
+    showToast("Udfylde Inputfelterne korrekt", message);
+    message.classList.add("fejl");
+    fname.classList.add("fejl");
+    ename.classList.add("fejl");
+  } else {
+    showToast("Success", message);
+    message.classList.add("success");
+    fname.classList.add("success");
+    ename.classList.add("success");
+  }
+});
+
+function showToast(message, container) {
+  const toast = document.createElement("div");
+  toast.classList.add("toast");
+  toast.innerText = message;
+  container.appendChild(toast);
+  setTimeout(() => {
+    toast.classList.add("show");
+    setTimeout(() => {
+      toast.classList.remove("show");
+      setTimeout(() => {
+        container.removeChild(toast);
+      }, 300);
+    }, 3000);
+  }, 100);
+}
+
