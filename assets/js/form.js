@@ -1,37 +1,44 @@
-const firstNameInput = document.getElementById("firstName");
-const lastNameInput = document.getElementById("lastName");
+const fName = document.getElementById("firstName");
+const eName = document.getElementById("lastName");
 
 
-// under 
-firstNameInput.addEventListener("input", () => {
-  if (firstNameInput.value.length < 2) {
-    firstNameInput.classList.add("error");
+
+//=========== UNDER ===========//
+
+// fName under 2 => error (red)
+fName.addEventListener("input", () => {
+  if (fName.value.length < 2) {
+    fName.classList.add("error");
   } else {
-    firstNameInput.classList.remove("error");
+    fName.classList.remove("error");
   }
 });
 
-lastNameInput.addEventListener("input", () => {
-  if (lastNameInput.value.length < 3) {
-    lastNameInput.classList.add("error");
+// eName under 3 => error (red)
+eName.addEventListener("input", () => {
+  if (eName.value.length < 3) {
+    eName.classList.add("error");
   } else {
-    lastNameInput.classList.remove("error");
+    eName.classList.remove("error");
   }
 });
 
-// over
-firstNameInput.addEventListener("input", () => {
-  if (firstNameInput.value.length > 2) {
-    firstNameInput.classList.add("over");
+//=========== OVER ===========//
+
+// fName over 2 => (green)
+fName.addEventListener("input", () => {
+  if (fName.value.length > 2) {
+    fName.classList.add("over");
   } else {
-    firstNameInput.classList.remove("over")
+    fName.classList.remove("over")
   }
 });
 
-lastNameInput.addEventListener("input", () => {
-  if (lastNameInput.value.length > 3) {
-    lastNameInput.classList.add("over");
+// eName over 3 => (green)
+eName.addEventListener("input", () => {
+  if (eName.value.length > 3) {
+    eName.classList.add("over");
   } else {
-    lastNameInput.classList.remove("over")
+    eName.classList.remove("over")
   }
 });
