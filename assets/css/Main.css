@@ -11,3 +11,23 @@
 body{
     background-color: #f0f0f0;
 }
+
+/* ================ Variables ================ */
+
+:root {
+    /* Colors */
+    --color-primary: #4caf50;
+    --color-secondary: #ffffff;
+    --color-error: #ff0000;
+
+    /* Spacing */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 30px;
+
+    /* Typography */
+    --font-family: "Open Sans", sans-serif;
+    --font-size-small: 16px;
+    --font-size-medium: 22px;
+    --font-weight-bold: bold;
+}

@@ -48,19 +48,33 @@ eName.addEventListener("input", () => {
 });
 
 
-//=========== submitButton ===========//
-submitButton.addEventListener("click", (event) => {
-  event.preventDefault();
+submitButton.addEventListener("click", (e) => {
+  e.preventDefault();
 
   const fname = document.getElementById("firstName").value;
   const ename = document.getElementById("lastName").value;
+  const email = document.getElementById("email").value;
   const message = document.getElementById("message");
 
   if (fname === "" || ename === "") {
     showToast("Udfylde Inputfelterne korrekt", message);
     message.classList.add("fejl");
-    fname.classList.add("fejl");
-    ename.classList.add("fejl");
+    if (fname === "") {
+      document.getElementById("firstName").classList.add("error");
+    } else {
+      document.getElementById("firstName").classList.remove("error");
+    }
+    if (ename === "") {
+      document.getElementById("lastName").classList.add("error");
+    } else {
+      document.getElementById("lastName").classList.remove("error");
+    }
+    if (email === "") {
+      document.getElementById("email").classList.add("error");
+    }
+    else {
+      document.getElementById("email").classList.remove("error");
+    }
   } else {
     showToast("Success", message);
     message.classList.add("success");

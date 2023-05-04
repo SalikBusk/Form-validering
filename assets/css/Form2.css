@@ -1,0 +1,101 @@
+/* ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+/* ================ Variables ================ */
+
+:root {
+  /* Colors */
+  --color-primary: #4caf50;
+  --color-secondary: #ffffff;
+  --color-error: #ff0000;
+
+  /* Spacing */
+  --spacing-small: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 30px;
+
+  /* Typography */
+  --font-family: "Open Sans", sans-serif;
+  --font-size-small: 16px;
+  --font-size-medium: 22px;
+  --font-weight-bold: bold;
+}
+
+.Form-Section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.Form-Container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 20px;
+  background: var(--color-secondary);
+  text-align: center;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.29);
+  padding: var(--spacing-medium);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+
+h1{
+  font-size: 26px;
+  font-weight: bold;
+  font-family: var(--font-family);
+}
+
+input[type="text"],
+input[type="email"] {
+  margin-top: 5px;
+  padding: var(--spacing-medium);
+  border-radius: 15px;
+  border: 2px solid #f0f0f0;
+  background-color: #f0f0f0;
+  font-size: 16px;
+  width: 100%;
+
+}
+
+input[type="text"].valid,
+input[type="email"].valid {
+  border-color: green;
+}
+
+input[type="text"].invalid,
+input[type="email"].invalid {
+  border-color: red;
+}
+
+input[type="submit"] {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: var(--spacing-medium);
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: #4caf4f99;
+}
